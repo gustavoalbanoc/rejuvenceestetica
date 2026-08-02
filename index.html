@@ -183,7 +183,7 @@
           <div class="care-visual" data-care-visual>
             <div class="care-orbit" aria-hidden="true"></div>
             <span class="care-number" data-care-number>01</span>
-            <img data-care-image src="assets/suelly-face.webp" alt="Retrato de Suelly Teles" width="670" height="780" />
+            <img data-care-image src="assets/suelly-face.webp" alt="Retrato de Suelly Teles" width="670" height="780" loading="lazy" decoding="async" />
           </div>
           <div class="care-detail">
             <p class="care-kicker" data-care-kicker>Equilíbrio, expressão e naturalidade</p>
@@ -251,10 +251,10 @@
     <section id="suelly" class="about section-pad" aria-labelledby="about-title">
       <div class="about-collage reveal">
         <figure class="about-image about-image--main">
-          <img src="assets/suelly-branco-portrait.webp" alt="Suelly Teles usando roupa branca" width="1070" height="1290" loading="lazy" />
+          <img src="assets/suelly-branco-portrait.webp" alt="Suelly Teles usando roupa branca" width="1070" height="1290" loading="lazy" decoding="async" />
         </figure>
         <figure class="about-image about-image--accent" data-parallax="0.05">
-          <img src="assets/serum-editorial.webp" alt="Frasco cosmético em composição editorial" width="730" height="794" loading="lazy" />
+          <img src="assets/serum-editorial.webp" alt="Frasco cosmético em composição editorial" width="730" height="794" loading="lazy" decoding="async" />
         </figure>
         <div class="about-seal" aria-hidden="true">
           <svg viewBox="0 0 100 100">
@@ -355,7 +355,7 @@
 
     <section class="editorial-break" aria-label="Mensagem da marca">
       <div class="editorial-image" data-parallax="0.04">
-        <img src="assets/rosa-full.webp" alt="Campanha editorial de Suelly Teles" width="730" height="914" loading="lazy" />
+        <img src="assets/rosa-full.webp" alt="Campanha editorial de Suelly Teles" width="730" height="914" loading="lazy" decoding="async" />
       </div>
       <blockquote class="reveal">
         <p>“Quem experimenta o cuidado de ser vista, confia.”</p>
@@ -420,12 +420,22 @@
     <section id="localizacao" class="location" aria-labelledby="location-title">
       <div class="location-map reveal">
         <iframe
-          title="Mapa da Clínica Rejuvence em Itapipoca"
+          title="Prévia do mapa da Clínica Rejuvence em Itapipoca"
           src="https://www.google.com/maps?q=R.%20Vicente%20Siebra,%201877,%20Violete,%20Itapipoca%20-%20CE,%2062504-090&output=embed"
           loading="lazy"
+          tabindex="-1"
+          aria-hidden="true"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
-        <div class="map-label" aria-hidden="true"><span>R</span></div>
+        <a
+          class="map-open"
+          href="https://www.google.com/maps/search/?api=1&query=R.%20Vicente%20Siebra%2C%201877%2C%20Violete%2C%20Itapipoca%20-%20CE%2C%2062504-090"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir a localização da Clínica Rejuvence no Google Maps">
+          <span class="map-label" aria-hidden="true"><span>R</span></span>
+          <span class="map-open-copy">Abrir no Google Maps <b aria-hidden="true">↗</b></span>
+        </a>
       </div>
       <div class="location-copy">
         <p class="eyebrow">07 / Encontre a Rejuvence</p>

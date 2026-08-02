@@ -272,9 +272,14 @@ function initFaq() {
 }
 
 function initParallax() {
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   const elements = $$('[data-parallax]');
   if (!elements.length) return;
+
+  const shouldDisable = window.matchMedia("(prefers-reduced-motion: reduce), (max-width: 860px), (pointer: coarse)").matches;
+  if (shouldDisable) {
+    elements.forEach((element) => element.style.removeProperty("transform"));
+    return;
+  }
 
   let ticking = false;
   const update = () => {
